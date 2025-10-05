@@ -1,0 +1,14 @@
+{
+  "name": "ru-delivery-fullstack",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "apps/backend/packages/*"
+  ],
+  "scripts": {
+    "dev:frontend": "npm --workspace apps/frontend run dev || npm --workspace apps/frontend start",
+    "dev:hackru": "npm --workspace apps/backend/packages/hackru-25 run dev || npm --workspace apps/backend run start:hackru",
+    "dev:relay": "npm --workspace apps/backend/packages/ru-relay-api run dev || npm --workspace apps/backend run start:relay",
+    "dev": "echo \"Run each: npm run dev:hackru | npm run dev:relay | npm run dev:frontend\""
+  }
+}

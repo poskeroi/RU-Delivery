@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  hackru-25:
+    build: ./packages/hackru-25
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    command: sh -c "npm install && (npm run start || node index.js)"
+  ru-relay-api:
+    build: ./packages/ru-relay-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    command: sh -c "npm install && (npm run start || node index.js)"
